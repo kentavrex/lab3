@@ -2,7 +2,7 @@ from pyswip import Prolog
 from parser import parse_fight_info
 
 prolog = Prolog()
-prolog.consult("/Users/evgeniyforbes/PycharmProjects/lab3/dota_2.pl")
+prolog.consult("dota_2.pl")
 
 
 def run_query(msg: str) -> iter:
