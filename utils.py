@@ -18,7 +18,7 @@ def check_hero_name(name: str, names: set) -> None:
         raise IOError("Incorrect input")
 
 
-def get_all_hero_names() -> set[str]:
+def get_all_hero_names() -> set:
     query = prolog.query("hero(Name, _, _, _, _)")
     res = set()
     for hero in query:
@@ -26,7 +26,7 @@ def get_all_hero_names() -> set[str]:
     return res
 
 
-def fight(s: str) -> list[tuple]:
+def fight(s: str) -> list:
     parsed = parse_fight_info(s)
     hero1 = parsed["Hero1"]
     hero2 = parsed["Hero2"]
