@@ -1,4 +1,4 @@
-def parse_filed(s: str) -> set | None:
+def parse_filed(s: str):
     fields = {"skill_damage", "damage", "attack", "attribute", "fight"}
     words = set(s.split())
     if len(fields & words) != 1:

@@ -43,6 +43,3 @@ def fight(s: str) -> list[tuple]:
         ans.append((hero1, hero2, res))
 
     return ans
-
-
-fight("")
