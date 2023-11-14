@@ -36,10 +36,10 @@ def fight(s: str) -> list:
 
     total_count = len(list(query))
     ans = []
-    for res in query:
-        hero1 = res.get("Hero1", hero1)
-        hero2 = res.get("Hero2", hero2)
-        res = res.get("Res", res)
+    for q_res in query:
+        hero1 = q_res.get("Hero1", hero1)
+        hero2 = q_res.get("Hero2", hero2)
+        res = q_res.get("Res", res)
         ans.append((hero1, hero2, res))
 
     return ans
