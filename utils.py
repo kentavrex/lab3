@@ -33,7 +33,6 @@ def fight(s: str) -> list:
     res = parsed["Res"]
 
     query_result = list(prolog.query(f'fight({hero1}, {hero2}, {res})'))
-    print(f'query_result={query_result}')
 
     ans = []
     for result in query_result:
