@@ -32,14 +32,13 @@ def fight(s: str) -> list:
     hero2 = parsed["Hero2"]
     res = parsed["Res"]
 
-    query = list(prolog.query(f"fight({hero1}, {hero2}, {res})"))
+    query_result = list(prolog.query(f"fight({hero1}, {hero2}, {res})"))
 
-    total_count = len(list(query))
     ans = []
-    for q_res in query:
-        hero1 = q_res.get("Hero1", hero1)
-        hero2 = q_res.get("Hero2", hero2)
-        res = q_res.get("Res", res)
+    for result in query_result:
+        hero1 = result.get("Hero1", hero1)
+        hero2 = result.get("Hero2", hero2)
+        res = result.get("Res", res)
         ans.append((hero1, hero2, res))
 
     return ans

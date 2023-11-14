@@ -21,6 +21,6 @@ def parse_fight_info(s: str) -> dict:
         if word.startswith("Hero2="):
             res["Hero2"] = word[len("Hero2="):]
         if word.startswith("Res="):
-            res["Res="] = word[len("Res="):]
+            res["Res"] = word[len("Res="):]
 
     return res
