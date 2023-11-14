@@ -10,17 +10,17 @@ def parse_filed(s: str):
 
 def parse_fight_info(s: str) -> dict:
     s = s.replace("[", "").replace("]", "")
-    res = {
+    result = {
         "Hero1": "Hero1",
         "Hero2": "Hero2",
         "Res": "Res"
     }
     for word in s.split():
         if word.startswith("Hero1="):
-            res["Hero1"] = word[len("Hero1="):]
+            result["Hero1"] = word[len("Hero1="):]
         if word.startswith("Hero2="):
-            res["Hero2"] = word[len("Hero2="):]
+            result["Hero2"] = word[len("Hero2="):]
         if word.startswith("Res="):
-            res["Res"] = word[len("Res="):]
+            result["Res"] = word[len("Res="):]
 
-    return res
+    return result
